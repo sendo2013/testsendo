@@ -3,7 +3,7 @@ package Mysql;
 
 
 interface DBPool {
-	public MysqlDBHandler getHandler();
+	public boolean getHandler();
 	public boolean returnHandler(MysqlDBHandler returnHandler);
 	public boolean close();
 }
@@ -24,8 +24,8 @@ interface MysqlDBHandler extends CommonDBHandler {
 
 class MysqlPool implements DBPool {
 	
-	public MysqlDBHandler getHandler(){
-		return;
+	public boolean getHandler(){
+		return true;
 	}
 	
 	
